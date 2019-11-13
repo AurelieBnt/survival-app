@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MapModule } from './map/map.module';
-import { CompassModule } from './compass/compass.module';
-import { BubbleModule } from './bubble/bubble.module';
 import { SurvivalComponent } from './survival.component';
 import { SurvivalRoutingModule } from './survival-routing.module';
+import { SharedModule } from '../shared/modules/shared.module';
 
 
 
@@ -14,13 +12,8 @@ import { SurvivalRoutingModule } from './survival-routing.module';
   ],
   imports: [
     CommonModule,
-    BubbleModule,
-    CompassModule,
-    MapModule,
-    SurvivalRoutingModule 
-  ],
-  exports: [
-    SurvivalComponent
+    SurvivalRoutingModule,
+    SharedModule
   ]
 })
 export class SurvivalModule { }

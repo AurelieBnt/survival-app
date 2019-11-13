@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SurvivalModule } from './survival/survival.module';
-import { FooModule } from './foo/foo.module';
+import { SharedModule } from './shared/modules/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,11 +17,11 @@ import { FooModule } from './foo/foo.module';
   ],
   entryComponents: [],
   imports: [
-    BrowserModule, 
-    IonicModule.forRoot(), 
-    FooModule,
+    BrowserModule,
     SurvivalModule,
-    AppRoutingModule],
+    SharedModule,
+    AppRoutingModule,
+  ],
   providers: [
     StatusBar,
     SplashScreen,
