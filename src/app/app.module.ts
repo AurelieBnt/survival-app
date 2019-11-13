@@ -19,9 +19,9 @@ import { FooModule } from './foo/foo.module';
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
-    AppRoutingModule,
     FooModule,
-    SurvivalModule],
+    SurvivalModule,
+    AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,

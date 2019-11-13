@@ -5,6 +5,8 @@ import { SurvivalComponent } from './survival.component';
 
 const routes: Routes = [
   {
+    path: "survival", redirectTo: "survival/bubble"},
+  {
     path: "survival", component: SurvivalComponent, children: [
       {
         path: "",
