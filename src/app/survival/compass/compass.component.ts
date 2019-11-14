@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
+import { TitleService } from '../shared/services/title.service';
 
 @Component({
   selector: 'app-compass',
   templateUrl: './compass.component.html',
   styleUrls: ['./compass.component.scss'],
 })
-export class CompassComponent implements OnInit {
+export class CompassComponent implements AfterViewChecked {
 
-  constructor() { }
+  constructor(
+    private titleService: TitleService
+  ) { }
 
-  ngOnInit() {}
-
+  ngAfterViewChecked() {
+    this.titleService.emitTitle("Compass");
+  }
 }

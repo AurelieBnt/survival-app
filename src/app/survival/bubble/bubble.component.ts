@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
+import { TitleService } from '../shared/services/title.service';
 
 @Component({
   selector: 'app-bubble',
   templateUrl: './bubble.component.html',
   styleUrls: ['./bubble.component.scss'],
 })
-export class BubbleComponent implements OnInit {
+export class BubbleComponent implements AfterViewChecked {
 
-  constructor() { }
+  constructor(
+    private titleService: TitleService
+  ) { }
 
-  ngOnInit() {}
+  ngAfterViewChecked() {
+    this.titleService.emitTitle("Bubble");
+  }
 
 }
