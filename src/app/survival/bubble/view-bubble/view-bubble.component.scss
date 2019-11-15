@@ -1,14 +1,17 @@
 :host {
     .ruler {
-        margin-top:2em;
+        margin-top: 2em;
+        margin-left: 5%;
+        margin-right: 5%;
         border:  2px solid black ;
-        background:peachpuff ;
+        background:var(--ion-color-primary);
+        border-radius: 30px;
         padding: 1em;
     }
     .bubble {
         display:inline-block;
-        background: palevioletred;
-        border:  2px solid purple ;
+        background: var( --ion-color-secondary-tint);
+        border:  2px solid black;
         border-radius: 50%;
         width: 2em;
         height:2em;

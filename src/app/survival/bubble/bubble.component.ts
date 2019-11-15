@@ -16,7 +16,7 @@ export class BubbleComponent implements AfterViewChecked {
     private degreeService: DegreeService 
   ) {
     this.degree = 0;
-    this.degreeService.getDegree().subscribe((degree: number) => this.degree = degree);
+    this.degreeService.getDegree().subscribe((degree: number) => this.degree = 30 < degree ? 30 : (-30 > degree) ? -30 : Math.round(degree *100) /100);
    }
 
   ngAfterViewChecked() {

@@ -5,7 +5,7 @@ import { SurvivalRoutingModule } from './survival-routing.module';
 import { SharedModule } from '../shared/modules/shared.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
 import { HeaderModule } from '../shared/components/header/header.module';
-
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 
 @NgModule({
@@ -18,6 +18,9 @@ import { HeaderModule } from '../shared/components/header/header.module';
     SharedModule,
     FooterModule,
     HeaderModule
+  ],
+  providers: [
+    ScreenOrientation
   ]
 })
 export class SurvivalModule { }
