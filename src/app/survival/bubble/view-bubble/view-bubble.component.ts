@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { DegreeService } from '../shared/services/degree.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-view-bubble',
@@ -8,12 +7,8 @@ import { DegreeService } from '../shared/services/degree.service';
 })
 export class ViewBubbleComponent {
 
-  protected degree: number;
+  @Input() degree: number;
+  //protected degree: number;
 
-  constructor(
-    private degreeService: DegreeService 
-  ) {
-    this.degree = 0;
-    this.degreeService.getDegree().subscribe((degree: number) => this.degree = degree);
-   }
+  constructor() {}
 }

@@ -1,0 +1,17 @@
+:host {
+    .ruler {
+        margin-top:2em;
+        border:  2px solid black ;
+        background:peachpuff ;
+        padding: 1em;
+    }
+    .bubble {
+        display:inline-block;
+        background: palevioletred;
+        border:  2px solid purple ;
+        border-radius: 50%;
+        width: 2em;
+        height:2em;
+    }
+
+}
