@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { DegreeService } from 'src/app/survival/bubble/shared/services/degree.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-degree',
@@ -8,12 +7,7 @@ import { DegreeService } from 'src/app/survival/bubble/shared/services/degree.se
 })
 export class DegreeComponent {
 
-  protected degree: number;
+  @Input() degree: number;
 
-  constructor(
-    private degreeService: DegreeService
-  ) {
-    this.degree = 0;
-    this.degreeService.getDegree().subscribe((degree: number) => this.degree = degree);
-  }
+  constructor() {}
 }
